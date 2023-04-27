@@ -1,0 +1,254 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-family: century Gothic;
+}
+a{
+    text-decoration: none;
+}
+.hero-container{
+     min-height: 100vh;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     display: flex;
+}
+#hero{
+    background-image: url(moi.jpg);
+    background-size: cover;
+    background-position: top right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+#hero::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background:black;
+    opacity: 0.7;
+    z-index: -1;
+}
+#hero h1{
+    color: transparent;
+    position: relative;
+    width: fit-content;
+    font-size: 30px;
+    display: block;
+    animation: animate-each .5s ease forwards;
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(1){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 3.5s;
+    color: rgb(232, 19, 55) 
+}
+#hero h1:nth-child(3){
+    animation-delay: 4.5s;
+}
+#hero h1:nth-child(4){
+    animation-delay:5.5s ;
+}
+#hero h1:nth-child(5){
+    animation-delay: 6.5s;
+}
+#hero h1:nth-child(6){
+    animation-delay: 7.5s;
+}
+#hero h1:nth-child(7){
+    animation-delay: 8.5s;
+}
+#hero h1 span:nth-child(1){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 3.5s;
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 4.5s;
+}
+#hero h1:nth-child(4) span{
+    animation-delay: 5.5s;
+}
+#hero h1:nth-child(5) span{
+    animation-delay: 6.5s;
+}
+#hero h1:nth-child(6) span{
+    animation-delay: 7.5s;
+}
+#hero h1:nth-child(7) span{
+    animation-delay: 8.5s;
+}
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color:rgb(232, 19, 55) ;
+    animation: animate-text 3s ease;
+    animation-delay: 3s;
+}
+
+#ro{
+    color: rgb(232, 19, 55);
+}
+#hero .cta{
+    padding: 10px 30px;
+    color:white ;
+    border: 2px solid rgb(232, 19, 55);
+    margin-top: 30px;
+    text-transform: uppercase;
+    transition: .3s ease background-color;
+    background-color: transparent;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+#hero .cta:hover{
+    color: white;
+    background:rgb(232, 19, 55) ;
+}
+#hero .hero-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: 50px;
+}
+/* @ keyframe section start */
+
+@keyframes animate-text{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes animate-each{
+100%{
+    color: white;
+}
+}
+@keyframes for-name{
+    100%{
+        color: rgb(232, 19, 55) ;
+    }
+    }
+
+/* ends of keyframe section */
+/* service section */
+#services{
+text-align: center;
+display: flex;
+
+}
+#services.services-container{
+flex-direction: column;
+text-align:center;
+margin: 0 auto;
+padding: 100px 0;
+}
+.title{
+    color:black;
+}
+#ti{
+    color:crimson;
+}
+#services.services-top p{
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+.service-bottom{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.service-item{
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-size: cover;
+    position:relative; 
+    z-index: -1;
+}
+.service-item{
+    background-color: black;
+    z-index: -1;
+}
+.service-item h2{
+color:crimson;
+z-index: 1;
+}
+.service-item p{
+    color:white;
+    z-index:1;
+    letter-spacing: 2px;
+}
+#services.service-item::after{
+    content:'';
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    position: absolute;
+    z-index: 1;
+}
+/* end service section */
+/* project Section  */
+#pro{
+    color:crimson;
+}
+.project{
+flex-direction: column;
+margin:0 auto;
+padding: 100px 0;
+max-width: 1200px;
+}
+.project-header h1{
+margin-bottom: 50px;
+}
+.all-project{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:10px;
+}
+.project-item h1{
+color: crimson;
+text-align: center;
+}
+.project-information p{
+    letter-spacing: 2px;
+}
+.project-item{
+    background-color: black;
+    z-index: -1;
+}
+.project-information{
+    color: white;
+    padding: 30px;
+    z-index: 1;
+    background:linear-gradient(60deg,grey,0%,rgb(62, 59, 59),100%);
+}
+#Project .project-img{
+    flex-basis: 30%;
+    overflow: hidden;
+    height: 300px;
+}
+.project-header h1{
+    text-align: center;
+}
